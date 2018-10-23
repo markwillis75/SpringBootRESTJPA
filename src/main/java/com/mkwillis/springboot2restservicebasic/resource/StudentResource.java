@@ -46,10 +46,8 @@ public class StudentResource {
 
     @PutMapping("/students/{id}")
     public ResponseEntity<Object> updateStudent(@RequestBody Student student, @PathVariable Long id){
-        Student retrievedStudent;
-
         try {
-            retrievedStudent = studentService.retrieveStudent(id);
+            studentService.retrieveStudent(id);
         }
         catch (StudentNotFoundException stnfe){
             return ResponseEntity.notFound().build();
