@@ -16,6 +16,7 @@ import java.util.List;
  * Created by Mark on 20/10/2018.
  */
 @RestController
+@CrossOrigin
 public class StudentResource {
 
     @Autowired
